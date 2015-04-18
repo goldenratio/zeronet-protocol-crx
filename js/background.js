@@ -10,10 +10,10 @@ function onBeforeRequest(details)
 	currentURLRequest.href = details.url;
 
 	// check for "zero" hostname
-	var isZero = currentURLRequest.hostname.toLowerCase() == HOSTNAME;
-	if(isZero == false)
+	var isZeroTLD = currentURLRequest.hostname.slice(-5) == ZERO_TLD;
+	if(isZeroTLD == false)
 	{
-		// not a zeronet host, return immediately
+		// not a zeronet TLD, return immediately
 		return;
 	}
 
@@ -25,7 +25,7 @@ function onBeforeRequest(details)
 	chrome.storage.local.get(function(item)
     {
         //console.log(item);
-        handleProxy(item.zeroHostData);        
+        handleProxy(item.zeroHostData);
     });
 
  	
@@ -34,16 +34,14 @@ function onBeforeRequest(details)
 
 function handleProxy(zeroHostData) 
 {
-	//console.log("handle proxy " + zeroHostData);
+	console.log("handle proxy " + zeroHostData);
 	zeroHostData = zeroHostData || DEFAULT_ZERO_HOSTDATA;
 
 	var config = {
 		mode: "pac_script",
 		pacScript: {
 			data: "function FindProxyForURL(url, host) {\n" +
-                "  if (host == '" + HOSTNAME + "')\n" +
                 "    return 'PROXY " + zeroHostData + "';\n" +
-                "  return 'DIRECT';\n" +
                 "}"
 		}		
 
@@ -55,17 +53,21 @@ function handleProxy(zeroHostData)
 			scope: "regular"
 		},
 		function() {
-			//console.log("done!");
+			console.log("proxy set done!");
 		}
 	);
 
 }
 
-var HOSTNAME = "zero";
+var ZERO_TLD = ".zero";
 var DEFAULT_ZERO_HOSTDATA = "127.0.0.1:43110";
 
-//var filter = { urls: ["<all_urls>"] };
-var filter = { urls: ["*://zero/*"] };
+var filter = { urls: ["<all_urls>"] };
 var opt_extraInfoSpec = ["blocking"];
 
 chrome.webRequest.onBeforeRequest.addListener(onBeforeRequest, filter, opt_extraInfoSpec);
+
+// proxy error listener
+chrome.proxy.onProxyError.addListener(function(details){
+	console.log(details);
+});

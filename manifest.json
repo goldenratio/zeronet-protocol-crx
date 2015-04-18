@@ -4,7 +4,7 @@
   "short_name": "ZeroNet",
   "description": "ZeroNet Protocol",
   "version": "0.1",
-  "permissions": [ "proxy", "webRequest", "webRequestBlocking", "*://zero/*", "storage" ],
+  "permissions": [ "proxy", "webRequest", "webRequestBlocking", "*://*/*", "storage" ],
 
   "icons": {
     
