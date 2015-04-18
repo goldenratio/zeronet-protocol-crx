@@ -55,11 +55,10 @@ function handleProxy(zeroHostData)
 			scope: "regular"
 		},
 		function() {
-			console.log("brr done!");
+			//console.log("done!");
 		}
 	);
 
-	console.log(JSON.stringify(config));
 }
 
 var HOSTNAME = "zero";
