@@ -41,8 +41,10 @@ function handleProxy(zeroHostData)
 		mode: "pac_script",
 		pacScript: {
 			data: "function FindProxyForURL(url, host) {\n" +
-                "    return 'PROXY " + zeroHostData + "';\n" +
-                "}"
+			"  if (shExpMatch(host, '*.zero'))\n" +
+			"    return 'PROXY " + zeroHostData + "';\n" +
+			"  return 'DIRECT';\n" +
+			"}"
 		}		
 
 	};
@@ -62,10 +64,14 @@ function handleProxy(zeroHostData)
 var ZERO_TLD = ".zero";
 var DEFAULT_ZERO_HOSTDATA = "127.0.0.1:43110";
 
-var filter = { urls: ["<all_urls>"] };
+//var filter = { urls: ["<all_urls>"] };
+var filter = { urls: ["*://*.zero/*"] };
 var opt_extraInfoSpec = ["blocking"];
 
 chrome.webRequest.onBeforeRequest.addListener(onBeforeRequest, filter, opt_extraInfoSpec);
+
+// clear proxy
+//chrome.proxy.settings.clear("regular", function(){ console.log("proxy cleared!")});
 
 // proxy error listener
 chrome.proxy.onProxyError.addListener(function(details){
