@@ -24,7 +24,7 @@ function onBeforeRequest(details)
 	// get data from local storage
 	chrome.storage.local.get(function(item)
     {
-        console.log(item);        
+        //console.log(item);
         handleProxy(item.zeroHostData);        
     });
 
@@ -55,7 +55,7 @@ function handleProxy(zeroHostData)
 			scope: "regular"
 		},
 		function() {
-			//console.log("done!");
+			console.log("done!");
 		}
 	);
 
