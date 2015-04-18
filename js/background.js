@@ -11,7 +11,9 @@ function onBeforeRequest(details)
 
 	// check for "zero" hostname
 	var isZeroTLD = currentURLRequest.hostname.slice(-5) == ZERO_TLD;
-	if(isZeroTLD == false)
+	var isZeroHost = currentURLRequest.hostname.toLowerCase() == ZERO_HOST;
+
+	if(isZeroTLD == false && isZeroHost == false)
 	{
 		// not a zeronet TLD, return immediately
 		return;
@@ -41,7 +43,7 @@ function handleProxy(zeroHostData)
 		mode: "pac_script",
 		pacScript: {
 			data: "function FindProxyForURL(url, host) {\n" +
-			"  if (shExpMatch(host, '*.zero'))\n" +
+			"  if (shExpMatch(host, '*.zero') || host == '" + ZERO_HOST + "')\n" +
 			"    return 'PROXY " + zeroHostData + "';\n" +
 			"  return 'DIRECT';\n" +
 			"}"
@@ -62,10 +64,11 @@ function handleProxy(zeroHostData)
 }
 
 var ZERO_TLD = ".zero";
+var ZERO_HOST = "zero";
 var DEFAULT_ZERO_HOSTDATA = "127.0.0.1:43110";
 
 //var filter = { urls: ["<all_urls>"] };
-var filter = { urls: ["*://*.zero/*"] };
+var filter = { urls: ["*://*.zero/*", "*://zero/*"] };
 var opt_extraInfoSpec = ["blocking"];
 
 chrome.webRequest.onBeforeRequest.addListener(onBeforeRequest, filter, opt_extraInfoSpec);

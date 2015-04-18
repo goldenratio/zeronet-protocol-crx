@@ -3,14 +3,14 @@
 check https://github.com/HelloZeroNet/ZeroNet/issues/83
 
 With the help of this Chrome extension you can configure ZeroNet IP and Port in browser.
-So you can run ZeroNet in a remote headless computer and use yor main computer for browsing.
+So you can run ZeroNet in a remote headless computer and use your main computer for browsing.
 
 **Demo**
 -----------------------------
 After installing this extension visit:
 
-[http://1EU1tbG9oC1A8jz2ouVwGZyQ5asrNsE4Vr.zero](http://1EU1tbG9oC1A8jz2ouVwGZyQ5asrNsE4Vr.zero)
-[http://1GamESVFyJfkmbxtcrLR2VXm4VFmwyeRY.zero](http://1GamESVFyJfkmbxtcrLR2VXm4VFmwyeRY.zero)
+http://zero/1EU1tbG9oC1A8jz2ouVwGZyQ5asrNsE4Vr](http://zero/1EU1tbG9oC1A8jz2ouVwGZyQ5asrNsE4Vr) or [http://1EU1tbG9oC1A8jz2ouVwGZyQ5asrNsE4Vr.zero](http://1EU1tbG9oC1A8jz2ouVwGZyQ5asrNsE4Vr.zero)
+http://zero.1GamESVFyJfkmbxtcrLR2VXm4VFmwyeRY](http://zero.1GamESVFyJfkmbxtcrLR2VXm4VFmwyeRY) or [http://1GamESVFyJfkmbxtcrLR2VXm4VFmwyeRY.zero](http://1GamESVFyJfkmbxtcrLR2VXm4VFmwyeRY.zero)
 
 
 **How To Install this Extension**
