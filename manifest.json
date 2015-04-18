@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "ZeroNet Protocol",
+  "short_name": "ZeroNet",
+  "description": "ZeroNet Protocol",
+  "version": "0.1",
+  "permissions": [ "proxy", "webRequest", "webRequestBlocking", "*://zero/*", "storage" ],
+
+  "icons": {
+    
+  },
+
+  "browser_action": {
+    "default_icon": "assets/icon_48.png",
+    "default_popup": "settings.html",
+    "default_title": "ZeroNet"
+  },
+
+  "background": {
+    "scripts": ["js/background.js"]
+  }
+}

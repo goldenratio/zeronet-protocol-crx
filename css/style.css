@@ -1,0 +1,28 @@
+body
+{
+    min-width: 450px;
+    min-height: 300px;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+    font-family: Arial, Verdana;
+    color: #000000;
+    font-size: 12px;
+    margin: 10px
+}
+
+.title-header
+{
+	font-size: 16px;
+	font-weight: bold;
+	
+}
+
+.hr
+{
+	margin-top: 10px;
+	margin-bottom: 20px;
+
+	height: 1px;
+	display: block;
+	background-color: #000;
+}
