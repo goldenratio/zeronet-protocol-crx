@@ -55,7 +55,7 @@ function handleProxy(zeroHostData)
 			scope: "regular"
 		},
 		function() {
-			console.log("done!");
+			//console.log("done!");
 		}
 	);
 
