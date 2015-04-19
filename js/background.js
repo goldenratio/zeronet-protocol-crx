@@ -120,6 +120,7 @@ function getPacConfig(zeroHostData)
 var ZERO_ACCEPTED_TLDS = [".zero", ".bit"]; // if you modify this also change pacScript (sorry)
 var ZERO_ACCEPTED_HOSTS = ["zero", "127.0.0.1:43110", "localhost:43110"]; // if you modify this also change pacScript (sorry)
 
+// default settings data - location where your zeroNet is running
 var DEFAULT__ZERO_HOST_DATA = "127.0.0.1:43110";
 
 var filter = { urls: ["<all_urls>"] };
