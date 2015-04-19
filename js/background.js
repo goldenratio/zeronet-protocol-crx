@@ -14,9 +14,9 @@ function onBeforeRequest(details)
 	var isZeroHost = false;
 
 	// tld
-	var currentTLD = currentURLRequest.hostname.slice(-5);
-	for(var i = 0; i < ZERO_ACCEPTED_HOSTS.length; i++)
+	for(var i = 0; i < ZERO_ACCEPTED_TLDS.length; i++)
 	{
+		var currentTLD = currentURLRequest.hostname.slice(-ZERO_ACCEPTED_TLDS[i].length);
 		if(currentTLD == ZERO_ACCEPTED_TLDS[i])
 		{
 			isZeroTLD =  true;
@@ -85,7 +85,7 @@ function getPacConfig(zeroHostData)
 		mode: "pac_script",
 		pacScript: {
 			data: "function FindProxyForURL(url, host) {\n" +
-			"  if (shExpMatch(host, '*.zero') || host == 'zero' || shExpMatch(url, '*127.0.0.1:43110*') || shExpMatch(url, '*localhost:43110*'))\n" +
+			"  if (shExpMatch(host, '*.bit') || shExpMatch(host, '*.zero') || host == 'zero' || shExpMatch(url, '*127.0.0.1:43110*') || shExpMatch(url, '*localhost:43110*'))\n" +
 			"    return 'PROXY " + zeroHostData + "';\n" +
 			"  return 'DIRECT';\n" +
 			"}"
@@ -97,7 +97,7 @@ function getPacConfig(zeroHostData)
 		mode: "pac_script",
 		pacScript: {
 			data: "function FindProxyForURL(url, host) {\n" +
-			"  if (shExpMatch(host, '*.zero') || host == 'zero')\n" +
+			"  if (shExpMatch(host, '*.bit') || shExpMatch(host, '*.zero') || host == 'zero')\n" +
 			"    return 'PROXY " + zeroHostData + "';\n" +
 			"  return 'DIRECT';\n" +
 			"}"
@@ -117,7 +117,7 @@ function getPacConfig(zeroHostData)
 	return pacConfig;
 }
 
-var ZERO_ACCEPTED_TLDS = [".zero"]; // if you modify this also change pacScript (sorry)
+var ZERO_ACCEPTED_TLDS = [".zero", ".bit"]; // if you modify this also change pacScript (sorry)
 var ZERO_ACCEPTED_HOSTS = ["zero", "127.0.0.1:43110", "localhost:43110"]; // if you modify this also change pacScript (sorry)
 
 var DEFAULT__ZERO_HOST_DATA = "127.0.0.1:43110";
