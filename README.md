@@ -11,7 +11,7 @@ After installing this extension, visit:
 
 [http://zero/1EU1tbG9oC1A8jz2ouVwGZyQ5asrNsE4Vr](http://zero/1EU1tbG9oC1A8jz2ouVwGZyQ5asrNsE4Vr)
 
-[http://zero.1GamESVFyJfkmbxtcrLR2VXm4VFmwyeRY](http://zero.1GamESVFyJfkmbxtcrLR2VXm4VFmwyeRY)
+[http://zero/1GamESVFyJfkmbxtcrLR2VXm4VFmwyeRY](http://zero/1GamESVFyJfkmbxtcrLR2VXm4VFmwyeRY)
 
 [http://board.zeronetwork.bit/](http://board.zeronetwork.bit/)
 
