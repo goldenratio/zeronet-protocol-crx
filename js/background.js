@@ -135,3 +135,31 @@ chrome.webRequest.onBeforeRequest.addListener(onBeforeRequest, filter, opt_extra
 chrome.proxy.onProxyError.addListener(function(details){
 	console.log(details);
 });
+
+/**
+ * Invoked when action button is clicked
+ */
+chrome.browserAction.onClicked.addListener(function() {
+
+	chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+		//console.log(tabs);
+		var activeTab = tabs[0];
+		var inNewTab = (activeTab.url != "chrome://newtab/");
+		openZeroHomePage(inNewTab);
+	});
+});
+
+function openZeroHomePage(inNewTab)
+{
+	if(inNewTab)
+	{
+		chrome.tabs.create({
+			url: "http://zero/"
+		});
+	}
+	else
+	{
+		chrome.tabs.update({url: 'http://zero'});
+	}
+
+}

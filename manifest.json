@@ -3,8 +3,8 @@
   "name": "ZeroNet Protocol",
   "short_name": "ZeroNet",
   "description": "ZeroNet Protocol",
-  "version": "0.1",
-  "permissions": [ "proxy", "webRequest", "webRequestBlocking", "*://*.bit/*", "*://zero/*", "*://127.0.0.1:*/*", "*://localhost:*/*",  "storage" ],
+  "version": "0.2",
+  "permissions": [ "tabs", "proxy", "webRequest", "webRequestBlocking", "*://*.bit/*", "*://zero/*", "*://127.0.0.1:*/*", "*://localhost:*/*",  "storage" ],
 
   "icons": {
     "48": "assets/icon_48.png"
@@ -12,9 +12,10 @@
 
   "browser_action": {
     "default_icon": "assets/icon_48.png",
-    "default_popup": "settings.html",
     "default_title": "ZeroNet"
   },
+
+  "options_page": "settings.html",
 
   "background": {
     "scripts": ["js/background.js"]

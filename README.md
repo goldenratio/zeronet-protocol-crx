@@ -23,3 +23,9 @@ After installing this extension, visit:
 3. Ensure that the Developer Mode checkbox in the top right-hand corner is checked.
 4. Click Load unpacked extension… to pop up a file-selection dialog.
 5. Navigate to the directory in which your extension files live, and select it.
+
+**To Do**
+-----------------------------
+
+1. Beautify settings page
+2. Do a ping test when settings info is saved
