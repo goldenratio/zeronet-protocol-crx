@@ -4,7 +4,7 @@
   "short_name": "ZeroNet",
   "description": "ZeroNet Protocol",
   "version": "0.2",
-  "permissions": [ "tabs", "proxy", "webRequest", "webRequestBlocking", "*://*.bit/*", "*://zero/*", "*://127.0.0.1:*/*", "*://localhost:*/*",  "storage" ],
+  "permissions": [ "tabs", "proxy", "webRequest", "webRequestBlocking", "*://*.bit/*", "*://zero/*",  "storage" ],
 
   "icons": {
     "48": "assets/icon_48.png"
