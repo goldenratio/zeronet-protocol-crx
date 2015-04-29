@@ -2,6 +2,7 @@
 -----------------------------
 
 ZeroNet Protocol is a Chrome extension, helps you to browse ZeroNet websites without http://127.0.0.1:43110
+
 Extension is available in Chrome WebStore: https://chrome.google.com/webstore/detail/zeronet-protocol/cpkpdcdljfbnepgfejplkhdnopniieop
 
 **Demo**
