@@ -1,9 +1,8 @@
-**Browser (Chrome) plugin for 127.0.0.1:43110 -less site access**
+**ZeroNet Protocol**
 -----------------------------
-check https://github.com/HelloZeroNet/ZeroNet/issues/83
 
-With the help of this Chrome extension you can configure ZeroNet IP and Port in browser.
-So you can run ZeroNet in a remote headless computer and use your main computer for browsing.
+ZeroNet Protocol is a Chrome extension, helps you to browse ZeroNet websites without http://127.0.0.1:43110
+Extension is available in Chrome WebStore: https://chrome.google.com/webstore/detail/zeronet-protocol/cpkpdcdljfbnepgfejplkhdnopniieop
 
 **Demo**
 -----------------------------
@@ -23,6 +22,10 @@ After installing this extension, visit:
 3. Ensure that the Developer Mode checkbox in the top right-hand corner is checked.
 4. Click Load unpacked extension… to pop up a file-selection dialog.
 5. Navigate to the directory in which your extension files live, and select it.
+
+Or
+
+Get it from Chrome WebStore https://chrome.google.com/webstore/detail/zeronet-protocol/cpkpdcdljfbnepgfejplkhdnopniieop
 
 **To Do**
 -----------------------------
