@@ -3,11 +3,12 @@
   "name": "ZeroNet Protocol",
   "short_name": "ZeroNet",
   "description": "ZeroNet Protocol",
-  "version": "0.2",
+  "version": "0.3",
   "permissions": [ "tabs", "proxy", "webRequest", "webRequestBlocking", "*://*.bit/*", "*://zero/*",  "storage" ],
 
   "icons": {
-    "48": "assets/icon_48.png"
+    "48": "assets/icon_48.png",
+    "128": "assets/icon_128.png"
   },
 
   "browser_action": {
