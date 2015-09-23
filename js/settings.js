@@ -64,7 +64,6 @@ var Settings = (function ()
 	    });
     };
 
-    
     return Settings;
 })();
 
