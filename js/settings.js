@@ -69,6 +69,7 @@ var Settings = (function ()
 })();
 
 window.addEventListener("load", onLoadComplete);
+
 function onLoadComplete(event)
 {
 	//alert("done");
