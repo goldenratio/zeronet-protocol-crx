@@ -14,10 +14,10 @@ function onBeforeRequest(details)
 	var isZeroHost = false;
 
 	// tld
-	for(var i = 0; i < ZERO_ACCEPTED_TLDS.length; i++)
+	for (var i = 0; i < ZERO_ACCEPTED_TLDS.length; i++)
 	{
 		var currentTLD = currentURLRequest.hostname.slice(-ZERO_ACCEPTED_TLDS[i].length);
-		if(currentTLD == ZERO_ACCEPTED_TLDS[i])
+		if (currentTLD == ZERO_ACCEPTED_TLDS[i])
 		{
 			isZeroTLD =  true;
 			break;
@@ -26,9 +26,9 @@ function onBeforeRequest(details)
 
 	// host
 	var currentHost = currentURLRequest.host.toLowerCase();
-	for(i = 0; i < ZERO_ACCEPTED_HOSTS.length; i++)
+	for (i = 0; i < ZERO_ACCEPTED_HOSTS.length; i++)
 	{
-		if(currentHost == ZERO_ACCEPTED_HOSTS[i])
+		if (currentHost == ZERO_ACCEPTED_HOSTS[i])
 		{
 			isZeroHost =  true;
 			break;
@@ -36,7 +36,7 @@ function onBeforeRequest(details)
 	}
 
 
-	if(isZeroTLD == false && isZeroHost == false)
+	if (isZeroTLD == false && isZeroHost == false)
 	{
 		// not a zeroNet TLD or Host, return immediately
 		return;
@@ -151,7 +151,7 @@ chrome.browserAction.onClicked.addListener(function() {
 
 function openZeroHomePage(inNewTab)
 {
-	if(inNewTab)
+	if (inNewTab)
 	{
 		chrome.tabs.create({
 			url: "http://zero/"
