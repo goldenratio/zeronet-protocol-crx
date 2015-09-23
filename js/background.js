@@ -35,13 +35,11 @@ function onBeforeRequest(details)
 		}
 	}
 
-
 	if (isZeroTLD == false && isZeroHost == false)
 	{
 		// not a zeroNet TLD or Host, return immediately
 		return;
 	}
-
 
 	//console.log("on before request! ", details);	
 	//console.log("hostname " + currentURLRequest.hostname +", protocol " + currentURLRequest.protocol, "url " + currentURLRequest.href);
@@ -53,8 +51,6 @@ function onBeforeRequest(details)
         handleProxy(item.zeroHostData);
     });
 
- 	
- 		
 }
 
 function handleProxy(zeroHostData) 
@@ -63,7 +59,6 @@ function handleProxy(zeroHostData)
 	zeroHostData = zeroHostData || DEFAULT__ZERO_HOST_DATA;
 
 	var config = getPacConfig(zeroHostData);
-
 
 	chrome.proxy.settings.set(
 		{
