@@ -1,3 +1,5 @@
+Status: Abandoned (I won't be working on this project anymore).
+
 **ZeroNet Protocol**
 -----------------------------
 
